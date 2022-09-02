@@ -1,0 +1,58 @@
+{
+  "name": "react_ts_hyh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint-eslint && npm run lint-stylelint",
+    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
+    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,scss,css}",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint -c .eslintrc.js"
+    ],
+    "*.{less,scss,css}": [
+      "stylelint --config .stylelintrc.js"
+    ],
+    "*.{ts,tsx,js,json,html,yml,less,scss,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "react+ts"
+  ],
+  "author": {
+    "name": "hyh",
+    "url": "http://43.138.220.188"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.8.2"
+  }
+}
