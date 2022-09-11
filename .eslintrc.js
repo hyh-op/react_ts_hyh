@@ -49,6 +49,8 @@ module.exports = {
         // 指定eslint-plugin-import解析的后缀名，出现频率高的文件类型放在前面
         extensions: ['.ts', '.tsx', '.js', '.json'],
       },
+      // 配合eslint-import-resolver-typescript解决ts的import时的路径映射问题
+      typescript: {},
     },
   },
 };
